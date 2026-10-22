@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes movingGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        .bg-animated-3d {
+            background: linear-gradient(-45deg, #4c1d95, #be185d, #4338ca, #0d9488);
+            background-size: 400% 400%;
+            animation: movingGradient 12s ease infinite;
+        }
+        @keyframes flyRight {
+            0% { transform: translate(-10vw, 110vh) rotate(10deg); }
+            100% { transform: translate(110vw, -10vh) rotate(-10deg); }
+        }
+        @keyframes flyLeft {
+            0% { transform: translate(110vw, 90vh) rotate(-10deg) scaleX(-1); }
+            100% { transform: translate(-10vw, -10vh) rotate(10deg) scaleX(-1); }
+        }
+        @keyframes flutter {
+            0%, 100% { margin-top: 0px; }
+            50% { margin-top: -30px; }
+        }
+        .butterfly {
+            position: fixed;
+            top: -20vh; /* Hide off-screen before animation starts */
+            font-size: 3rem;
+            z-index: 100;
+            pointer-events: none;
+            filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.3));
+        }
+        .b1 { animation: flyRight 14s linear infinite, flutter 0.8s ease-in-out infinite; }
+        .b2 { animation: flyLeft 18s linear infinite 2s, flutter 1.2s ease-in-out infinite; }
+        .b3 { animation: flyRight 22s linear infinite 5s, flutter 1s ease-in-out infinite; font-size: 2rem; }
+        .b4 { animation: flyLeft 16s linear infinite 8s, flutter 0.9s ease-in-out infinite; font-size: 4rem; }
+    </style>
+    <title>University of Layyah Blog</title>
+</head>
+<body class="bg-animated-3d text-gray-800 font-sans min-h-screen overflow-x-hidden">
+    <!-- Butterflies -->
+    <div class="butterfly b1">🦋</div>
+    <div class="butterfly b2">🦋</div>
+    <div class="butterfly b3">🦋</div>
+    <div class="butterfly b4">🦋</div>
+
+    <!--===================Header================-->
+    <header class="bg-white/10 backdrop-blur-md text-white text-center py-12 shadow-xl border-b border-white/20">
+        <!--Image-->
+        <img
+        src="logo.jpeg"
+        alt="University of Layyah logo"
+        class="w-40 mx-auto mb-4 rounded-full border-4 border-white/80 shadow-lg hover:scale-105 transition-transform duration-300">
+
+        <h1 class="text-5xl font-extrabold mt-4 tracking-tight text-white [text-shadow:2px_2px_0_#d946ef,4px_4px_0_#a21caf,6px_6px_0_#701a75,8px_8px_15px_rgba(0,0,0,0.4)]">
+            University of Layyah Blog
+        </h1>
+        <nav class="mt-8 pb-2 text-lg">
+            <a href="#" class="mx-4 font-semibold hover:text-pink-200 transition-colors">
+                Home
+            </a>
+            <a href="#" class="mx-4 font-semibold hover:text-pink-200 transition-colors">
+                Blogs
+            </a>
+            <a href="#" class="mx-4 font-semibold hover:text-pink-200 transition-colors">
+                Quicklink
+            </a>
+            <a href="#" class="mx-4 font-semibold hover:text-pink-200 transition-colors">
+                Contact
+            </a>
+        </nav>
+    </header>
+    <!--====================MAIN CONTENT=====================-->
+    <main class="bg-transparent py-12 px-5 flex flex-col items-center">
+        <!--==========BLOG POST 1===============-->
+        <article class="bg-white w-full max-w-3xl mb-10 
+        rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100">
+            <img src="faculty.jpeg"
+            alt="University Campus"
+            class="w-full h-72 object-cover">
+            <div class="p-8 text-center sm:text-left">
+                <h2 class="text-3xl font-extrabold text-purple-600 [text-shadow:2px_2px_0_#fbcfe8,4px_4px_0_#f472b6,5px_5px_10px_rgba(0,0,0,0.2)] mb-4">
+                    University of Layyah-A Growing Hub
+                </h2>
+                <p class="mb-4 text-slate-600 leading-relaxed text-lg">
+                    University Of Layyah Campus serves as the primary full-fledged public sector university option in the district with extensive agricultural and degree offerings, whereas Government College University Faisalabad Layyah Campus GCUF Layyah Campus operates as an established regional campus focusing on conventional higher education, and the alternative University of Layyah location along Karor-Layyah Road provides localized accessibility.Would you like to:Check detailed degree programs and faculties availableExplore admission criteria and merit listsInquire about hostel and transport facilities
+                </p>
+            </div>
+        </article>
+
+        <!--==========BLOG POST 2===============-->
+        <article class="bg-white w-full max-w-3xl mb-10 
+        rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 border border-slate-100">
+            <img src="library.jpeg"
+            alt="University Campus"
+            class="w-full h-72 object-cover">
+            <div class="p-8 text-center sm:text-left">
+                <h2 class="text-3xl font-extrabold text-purple-600 [text-shadow:2px_2px_0_#fbcfe8,4px_4px_0_#f472b6,5px_5px_10px_rgba(0,0,0,0.2)] mb-4">
+                    Central Library
+                </h2>
+                <p class="mb-4 text-slate-600 leading-relaxed text-lg">
+                Welcome to the portal of Central Library University of Layyah. Our aim is to provide the best information and reference services for the users in line with ever changing trends in information and communication technology and the current needs of the university throughout the globe.
+                The library supports the academic programs of the university through its services, which enable the students and the faculty to access, update their knowledge and information. This support empowers our users to develop the information and technological competencies necessary to achieve their educational, research and professional goals.
+                In the library of the University, you will find wonderful spaces where you can access a wide range of digital resources to support your teaching, learning, and research activities. We are honored to work with all staff of the University of Layyah, library team and our community of learners.    
+                </p>
+            </div>
+        </article>
+
+    </main>
+</body>
+</html>
